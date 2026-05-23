@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard - Submissions</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="dashboard-style.css" />
+    <script src="dashboard.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <img src="./assests/images/logo.png" alt="logo" class="logo" />
+      <nav>
+        <h1 class="title">Dashboard - Submissions</h1>
+      </nav>
+    </header>
+
+    <main>
+      <div class="dashboard-container">
+        <h2 class="dashboard-title">Form Submissions</h2>
+        <div class="table-wrapper">
+          <table class="submissions-table" id="submissionsTable">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Email</th>
+                <th>Password</th>
+                <th>Timestamp</th>
+              </tr>
+            </thead>
+            <tbody id="tableBody">
+              <tr>
+                <td colspan="4" class="no-data">No submissions yet</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="actions">
+          <button class="btn-refresh" onclick="loadSubmissions()">
+            Refresh Data
+          </button>
+          <a href="index.html" class="btn-back">Back to Form</a>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <ul>
+        <li><a href="index.html">Impressum</a></li>
+        <li><a href="index.html">Verträge hier kündigen</a></li>
+        <li><a href="index.html">AGB</a></li>
+        <li><a href="index.html">Datenschutzhinweise</a></li>
+        <li><a href="index.html">Hilfe & Kontakt</a></li>
+        <li><a href="index.html">Presse</a></li>
+        <li><a href="index.html">Karriere</a></li>
+      </ul>
+    </footer>
+  </body>
+</html>

