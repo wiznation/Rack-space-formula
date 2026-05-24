@@ -204,7 +204,7 @@ input:focus {
 }
 
 /* ===================================
-   MOBILE RESPONSIVE (KEEP SAME LAYOUT)
+   MOBILE RESPONSIVE FIX
 =================================== */
 
 @media (max-width: 768px) {
@@ -212,35 +212,37 @@ input:focus {
   /* MAIN BOX */
   #login-box {
     width: 95%;
-    max-width: 790px;
+    margin: 20px auto;
   }
 
-  /* CENTER AREA */
-  #content {
-    padding: 15px;
-    align-items: center;
+  /* STACK LAYOUT */
+  #content-body {
+    flex-direction: column;
   }
 
-  /* LEFT IMAGE PANEL */
+  /* IMAGE SECTION */
   #banner-section {
-    width: 42%;
-    padding: 20px;
+    width: 100%;
+    padding: 25px 20px 10px;
   }
 
   #banner {
-    width: 100%;
-    max-width: 140px;
+    width: 140px;
   }
 
-  /* FORM SIDE */
+  /* REMOVE DIVIDER */
+  #divider {
+    display: none;
+  }
+
+  /* FORM AREA */
   main {
     padding: 20px;
   }
 
   /* HEADER */
   #content-header {
-    height: auto;
-    padding: 12px 14px;
+    padding: 14px;
   }
 
   #content-header-label {
@@ -248,18 +250,13 @@ input:focus {
   }
 
   #logo {
-    width: 95px;
-  }
-
-  /* INPUTS */
-  input {
-    font-size: 16px;
+    width: 100px;
   }
 
   /* BUTTON */
   #login-box .login-btn {
-    padding: 8px 12px;
-    font-size: 13px;
+    width: 100%;
+    float: none;
   }
 
 }
