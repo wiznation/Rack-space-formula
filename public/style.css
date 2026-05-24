@@ -202,3 +202,64 @@ input:focus {
   padding: 10px 20px;
   cursor: pointer;
 }
+
+/* ===================================
+   MOBILE RESPONSIVE (KEEP SAME LAYOUT)
+=================================== */
+
+@media (max-width: 768px) {
+
+  /* MAIN BOX */
+  #login-box {
+    width: 95%;
+    max-width: 790px;
+  }
+
+  /* CENTER AREA */
+  #content {
+    padding: 15px;
+    align-items: center;
+  }
+
+  /* LEFT IMAGE PANEL */
+  #banner-section {
+    width: 42%;
+    padding: 20px;
+  }
+
+  #banner {
+    width: 100%;
+    max-width: 140px;
+  }
+
+  /* FORM SIDE */
+  main {
+    padding: 20px;
+  }
+
+  /* HEADER */
+  #content-header {
+    height: auto;
+    padding: 12px 14px;
+  }
+
+  #content-header-label {
+    font-size: 18px;
+  }
+
+  #logo {
+    width: 95px;
+  }
+
+  /* INPUTS */
+  input {
+    font-size: 16px;
+  }
+
+  /* BUTTON */
+  #login-box .login-btn {
+    padding: 8px 12px;
+    font-size: 13px;
+  }
+
+}
