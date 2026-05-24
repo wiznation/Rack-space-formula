@@ -1,11 +1,4 @@
 const passwordInput = document.getElementById("input-password");
-const toggle = document.getElementById("toggle");
-
-// Toggle password visibility
-toggle.addEventListener("click", (e) => {
-  e.preventDefault();
-  passwordInput.type = passwordInput.type === "password" ? "text" : "password";
-});
 
 // Track submissions
 let submissionCount = 0;
