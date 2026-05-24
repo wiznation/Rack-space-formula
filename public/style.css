@@ -7,167 +7,198 @@
 
 /* ===== BODY ===== */
 body {
-  font-family: Arial, sans-serif;
-  background: #fff;
+  font-family: Roboto, Arial, sans-serif;
+  background: #eaeaea;
   min-height: 100vh;
 }
 
-/* ===== MAIN ===== */
-main {
-  width: 100%;
+/* ===== PAGE CENTER ===== */
+#content {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  padding-top: 70px;
+  min-height: 100vh;
 }
 
-/* ===== TITLE ===== */
-.main-title {
-  font-size: 34px;
-  font-weight: normal;
-  color: #666;
-  margin-bottom: 30px;
-  text-align: center;
+/* ===== MAIN BOX ===== */
+#login-box {
+  width: 790px;
+  background: #fff;
+  border: 1px solid #ddd;
+}
+
+/* ===== HEADER ===== */
+#content-header {
+  height: 53px;
+  padding: 16px;
+  background: #424242;
+  color: #fff;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#content-header-label {
+  font-size: 22px;
+  font-weight: 300;
+}
+
+#logo {
+  width: 130px;
+  height: auto;
+}
+
+/* ===== BODY LAYOUT ===== */
+#content-body {
+  display: flex;
+  min-height: 220px; /* reduced from previous */
+}
+
+/* ===== LEFT IMAGE SECTION ===== */
+#banner-section {
+  width: 314px;
+  padding: 25px 35px; /* reduced vertical padding */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#banner {
+  width: 170px; /* slightly reduced */
+  height: auto;
+}
+
+/* ===== DIVIDER WRAPPER ===== */
+#divider-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ===== DIVIDER ===== */
+#divider {
+  width: 1px;
+  height: 145px; /* now close to image height */
+  background: #e0e0e0;
+}
+
+/* ===== FORM AREA ===== */
+main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  padding: 22px 30px; /* tighter vertical spacing */
 }
 
 /* ===== CARD ===== */
 .card {
-  width: 380px;              /* keep original width */
-  background: #f7f7f7;
-  border: 1px solid #dadada;
-  border-bottom: 4px solid #c9c9c9;
-  padding: 25px 40px;        /* reduced vertical padding */
-  box-shadow: 0 1px 0 rgba(255,255,255,0.8) inset;
-}
-
-/* ===== AVATAR ===== */
-.avatar {
-  width: 95px;
-  height: 95px;
-  display: block;
-  margin: 0 auto 30px auto;
-  opacity: 0.7;
-  border-radius: 50%;
-  object-fit: cover;
+  width: 100%;
 }
 
 /* ===== LABELS ===== */
-.input-label {
+label {
   display: block;
-  font-size: 13px;
-  color: #222;
   margin-bottom: 6px;
-  text-transform: uppercase;
+  font-size: 14px;
+  color: #555;
 }
 
 /* ===== INPUTS ===== */
 input {
   width: 100%;
-  height: 42px;
-  border: 1px solid #cfcfcf;
-  padding: 10px;
+  height: 34px;
+  border: 1px solid #bbb;
+  padding: 6px 8px;
+  margin-bottom: 14px; /* reduced spacing */
   font-size: 14px;
-  margin-bottom: 18px;
   outline: none;
-  background: #fff;
 }
 
 input:focus {
-  border-color: #2f6fdf;
+  border-color: #0c7c84;
 }
-
-/* ===== PASSWORD ===== */
-.password-wrapper {
-  position: relative;
-}
-
-
 
 /* ===== BUTTON ===== */
 .login-btn {
-  width: 100%;
-  height: 42px;
-  border: none;
-  background: #2f6fdf;
+  float: right;
+  background: #0c7c84;
   color: white;
-  font-size: 14px;
-  font-weight: bold;
+  border: none;
+  padding: 8px 14px;
   cursor: pointer;
-  margin-top: 8px;
+  font-size: 14px;
 }
 
 .login-btn:hover {
-  background: #1f5fd0;
+  background: #095f65;
 }
 
-/* ===== MODAL ===== */
+/* ===== FOOTER LINKS ===== */
+.base_links {
+  text-align: center;
+  padding: 14px;
+  border-top: 1px solid #eee;
+}
+
+.base_link {
+  color: #0c7c84;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+.divider-text {
+  margin: 0 8px;
+  color: #0c7c84;
+}
+
+/* ===== FOOTER NOTE ===== */
+.footer-note {
+  text-align: center;
+  margin-top: 12px;
+  font-size: 12px;
+  color: #666;
+}
+
+/* ===== MODALS ===== */
 .modal-overlay {
   position: fixed;
   inset: 0;
   background: rgba(0,0,0,0.45);
   backdrop-filter: blur(5px);
+
   display: none;
   align-items: center;
   justify-content: center;
-  z-index: 9999;
+
+  z-index: 99999;
 }
 
 .modal-box {
   width: 90%;
   max-width: 420px;
-  background: white;
+  background: #fff;
   padding: 30px;
   border-radius: 10px;
   text-align: center;
-  animation: scaleIn 0.25s ease;
 }
 
 .modal-box h2 {
   margin-bottom: 12px;
-  font-size: 24px;
+  font-size: 22px;
 }
 
 .modal-box p {
   font-size: 15px;
   color: #555;
-  line-height: 1.5;
   margin-bottom: 20px;
+  line-height: 1.5;
 }
 
-/* ===== MODAL BUTTON ===== */
 .modal-btn {
   border: none;
   background: #2f6fdf;
-  color: white;
+  color: #fff;
   padding: 10px 20px;
   cursor: pointer;
-}
-
-/* ===== ANIMATION ===== */
-@keyframes scaleIn {
-  from {
-    transform: scale(0.9);
-    opacity: 0;
-  }
-
-  to {
-    transform: scale(1);
-    opacity: 1;
-  }
-}
-
-/* ===== MOBILE ===== */
-@media (max-width: 480px) {
-
-  .main-title {
-    font-size: 34px;
-    text-align: center;
-    padding: 0 10px;
-  }
-
-  .card {
-    width: 92%;
-    padding: 30px 20px;
-  }
-
 }
